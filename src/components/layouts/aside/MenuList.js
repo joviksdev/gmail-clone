@@ -11,6 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import Collapse from '@material-ui/core/Collapse';
+import Tooltip from '@material-ui/core/Tooltip';
 
 // Material-ui/Icons
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -32,10 +33,12 @@ const MenuList = () => {
 		<Box className={classes.menuListWrapper}>
 			<List className={classes.menuList}>
 				{lists.map((list, key) => (
-					<ListItem button key={key}>
-						{list.icon}
-						<ListItemText primary={list.name} />
-					</ListItem>
+					<Tooltip key={key} title={list.name} placement='right'>
+						<ListItem button key={key}>
+							{list.icon}
+							<ListItemText primary={list.name} />
+						</ListItem>
+					</Tooltip>
 				))}
 				<ListItem button onClick={handleExpandMore}>
 					<ExpandMoreIcon className={rotate} />

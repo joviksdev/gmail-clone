@@ -18,6 +18,24 @@ const styles = () => ({
 	},
 	btn: {
 		...btn,
+		'& .MuiSvgIcon-root': {
+			fontSize: '18px',
+		},
+	},
+	contentBtn: {
+		...btn,
+		borderRadius: '50%',
+		'& .MuiSvgIcon-root': {
+			fontSize: '20px',
+		},
+	},
+	pagination: {
+		'& .MuiTablePagination-input, #mui-28998': {
+			display: 'none',
+		},
+		'& .MuiTablePagination-actions': {
+			marginLeft: '0px',
+		},
 	},
 });
 

@@ -71,7 +71,6 @@ const styles = () => ({
 		},
 		'& .MuiCheckbox-root': {
 			padding: '0px',
-			marginRight: '10px',
 		},
 		'& .Mui-checked': {
 			color: grayColor[6],

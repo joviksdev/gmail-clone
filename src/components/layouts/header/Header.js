@@ -26,12 +26,7 @@ const Header = () => {
 	return (
 		<AppBar position='static' className={classes.appBar}>
 			<Toolbar>
-				<Box
-					width='100%'
-					display='grid'
-					gridTemplateColumns='20% 80%'
-					gridGap='15px'
-				>
+				<Box width='100%' display='grid' gridTemplateColumns='20% 80%'>
 					<Box display='flex' alignItems='center'>
 						<Box mr='10px'>
 							<Button className={classes.barIcon}>

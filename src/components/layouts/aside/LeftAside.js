@@ -18,7 +18,7 @@ const LeftAside = () => {
 	const classes = useStyles();
 
 	return (
-		<Box>
+		<Box marginRight='15px'>
 			<Box marginLeft='10px' marginBottom='10px'>
 				<Button className={classes.btnCompose}>
 					<AddIcon />
