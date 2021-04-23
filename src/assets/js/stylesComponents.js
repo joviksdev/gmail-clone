@@ -4,6 +4,14 @@ const transition = {
 
 const btn = {
 	minWidth: 'initial',
+	textTransform: 'capitalize',
+};
+
+const container = {
+	padding: '0 15px',
+	margin: 'auto',
+	width: '100%',
+	overflow: 'hidden',
 };
 const warningColor = [
 	'#ff9800',
@@ -71,6 +79,7 @@ const whiteColor = '#FFF';
 export {
 	transition,
 	btn,
+	container,
 	blackColor,
 	blueColor,
 	skyBlue,

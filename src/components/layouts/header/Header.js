@@ -24,7 +24,7 @@ const useStyles = makeStyles(styles);
 const Header = () => {
 	const classes = useStyles();
 	return (
-		<AppBar position='static' className={classes.container}>
+		<AppBar position='static' className={classes.appBar}>
 			<Toolbar>
 				<Box
 					width='100%'

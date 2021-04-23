@@ -1,10 +1,14 @@
-import { btn } from '../../../assets/js/stylesComponents';
+import { btn, container } from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	container: {
+		...container,
+	},
+	appBar: {
+		...container,
 		backgroundColor: 'transparent !important',
-		paddingTop: '5px',
-		paddingBottom: '5px',
+		padding: '5px 0px',
+		width: '100%',
 		'& .MuiToolbar-regular': {
 			minHeight: 'initial',
 		},
