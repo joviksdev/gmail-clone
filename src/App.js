@@ -1,5 +1,4 @@
-import Wrapper from './components/layouts/wrapper/PrivateWrapper';
-import Inbox from './components/views/Inbox';
+import Inbox from './components/views/inbox/Inbox';
 
 function App() {
 	return (

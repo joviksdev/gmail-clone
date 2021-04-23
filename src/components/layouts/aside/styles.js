@@ -1,8 +1,4 @@
-import {
-	btn,
-	grayColor,
-	whiteColor,
-} from '../../../assets/js/stylesComponents';
+import { btn, whiteColor } from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	menuListWrapper: {
@@ -55,6 +51,10 @@ const styles = () => ({
 	},
 	divider: {
 		color: 'red',
+	},
+	meetingWrapper: {
+		height: '30vh',
+		overflowY: 'auto',
 	},
 });
 

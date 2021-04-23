@@ -1,3 +1,5 @@
+import { btn } from '../../../assets/js/stylesComponents';
+
 const styles = () => ({
 	tableContainer: {
 		backgroundColor: 'rgba(0, 0, 0, 0.3)',
@@ -14,6 +16,13 @@ const styles = () => ({
 		},
 		'& .MuiToolbar-root p:nth-child(2)': {
 			display: 'none',
+		},
+	},
+	contentBtn: {
+		...btn,
+		borderRadius: '50%',
+		'& .MuiSvgIcon-root': {
+			fontSize: '20px',
 		},
 	},
 });

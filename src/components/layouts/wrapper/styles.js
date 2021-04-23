@@ -1,4 +1,4 @@
-import { container } from '../../../assets/js/stylesComponents';
+import {} from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	container: {

@@ -26,8 +26,8 @@ const Header = () => {
 	return (
 		<AppBar position='static' className={classes.appBar}>
 			<Toolbar>
-				<Box width='100%' display='grid' gridTemplateColumns='20% 80%'>
-					<Box display='flex' alignItems='center'>
+				<Box width='100%' display='flex'>
+					<Box flexBasis='18%' display='flex' alignItems='center'>
 						<Box mr='10px'>
 							<Button className={classes.barIcon}>
 								<MenuIcon />
@@ -38,45 +38,47 @@ const Header = () => {
 						</Box>
 					</Box>
 					<Box
-						display='grid'
-						gridTemplateColumns='2fr 1fr'
-						gridGap='15px'
-						justifyContent='ceenter'
+						flexBasis='60%'
+						display='flex'
+						justifyContent='space-between'
 						alignItems='center'
 					>
-						<Box>
-							<TextField
-								fullWidth={true}
-								variant='outlined'
-								placeholder='Search email'
-								startAdornment={
-									<InputAdornment position='start'>
-										<SearchOutlinedIcon />
-									</InputAdornment>
-								}
-							/>
+						<TextField
+							fullWidth={true}
+							variant='outlined'
+							placeholder='Search email'
+							startAdornment={
+								<InputAdornment position='start'>
+									<SearchOutlinedIcon />
+								</InputAdornment>
+							}
+						/>
+					</Box>
+					<Box
+						display='flex'
+						flexBasis='24%'
+						justifyContent='flex-end'
+						alignItems='center'
+					>
+						<Box
+							display='grid'
+							gridGap='5px'
+							gridTemplateColumns='repeat(3, 1fr)'
+						>
+							<Button className={classes.btn}>
+								<HelpOutlineOutlinedIcon />
+							</Button>
+							<Button className={classes.btn}>
+								<SettingsOutlinedIcon />
+							</Button>
+							<Button className={classes.btn}>
+								<AppsOutlinedIcon />
+							</Button>
 						</Box>
-						<Box display='flex' justifyContent='flex-end'>
-							<Box
-								display='grid'
-								gridGap='5px'
-								gridTemplateColumns='repeat(3, 1fr)'
-							>
-								<Button className={classes.btn}>
-									<HelpOutlineOutlinedIcon />
-								</Button>
-								<Button className={classes.btn}>
-									<SettingsOutlinedIcon />
-								</Button>
-								<Button className={classes.btn}>
-									<AppsOutlinedIcon />
-								</Button>
-							</Box>
-							<Box>
-								<Button className={classes.btn}>
-									<PersonOutlinedIcon />
-								</Button>
-							</Box>
+						<Box>
+							<Button className={classes.btn}>
+								<PersonOutlinedIcon />
+							</Button>
 						</Box>
 					</Box>
 				</Box>

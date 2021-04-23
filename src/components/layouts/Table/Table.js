@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './styles';
 import Checkbox from '../customFormComponents/CustomCheckbox';
-import data from './data.json';
 
 //  Material-ui/Core
 import Table from '@material-ui/core/Table';
@@ -16,7 +15,7 @@ import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
 
 const useStyles = makeStyles(styles);
 
-const Index = () => {
+const Index = ({ data }) => {
 	const classes = useStyles();
 	const [page, setPage] = React.useState(0);
 	const [rowsPerPage, setRowsPerPage] = React.useState(5);

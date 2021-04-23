@@ -18,7 +18,7 @@ const useStyles = makeStyles(styles);
 const Meet = () => {
 	const classes = useStyles();
 	return (
-		<Box padding='10px 0px'>
+		<Box className={classes.meetingWrapper} padding='10px 0px'>
 			<Typography className={classes.subHeaderText} variant='h6'>
 				More
 			</Typography>

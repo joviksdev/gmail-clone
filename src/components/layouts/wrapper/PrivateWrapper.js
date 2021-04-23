@@ -16,11 +16,11 @@ const PrivateWrapper = ({ children }) => {
 		<Box position='fixed' width='100%' height='100vh'>
 			<Header />
 			<Box className={classes.container}>
-				<Box width='100%' display='grid' gridTemplateColumns='21% 75%'>
-					<Box>
+				<Box width='100%' display='flex'>
+					<Box flexBasis='19%'>
 						<LeftAside />
 					</Box>
-					<Box>
+					<Box flexBasis='75%'>
 						<ContentHeader />
 						<Box>{children}</Box>
 					</Box>

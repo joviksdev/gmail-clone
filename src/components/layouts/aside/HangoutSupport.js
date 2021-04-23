@@ -18,10 +18,11 @@ const HangoutSupport = () => {
 	return (
 		<Box
 			position='absolute'
+			bgcolor='white'
 			bottom='0px'
 			display='flex'
 			justifyContent='center'
-			width='20%'
+			width='19%'
 			borderTop='1px solid gray'
 		>
 			<Divider

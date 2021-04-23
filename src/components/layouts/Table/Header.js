@@ -18,7 +18,12 @@ const useStyles = makeStyles(styles);
 const Header = () => {
 	const classes = useStyles();
 	return (
-		<Box display='flex' alignItems='center' justifyContent='space-between'>
+		<Box
+			padding='0px 10px'
+			display='flex'
+			alignItems='center'
+			justifyContent='space-between'
+		>
 			<Box display='flex' alignItems='center'>
 				<Box display='flex'>
 					<Checkbox />
