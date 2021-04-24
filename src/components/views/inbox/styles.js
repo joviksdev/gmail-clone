@@ -5,7 +5,8 @@ const styles = () => ({
 		borderBottom: '1px solid rgba(250, 250, 250, 0.5)',
 		'& .MuiButtonBase-root': {
 			...btn,
-			minWidth: '240px !important',
+			minWidth: 'initial',
+			width: '25% !important',
 			padding: '6px 5px',
 			minHeight: '55px',
 		},

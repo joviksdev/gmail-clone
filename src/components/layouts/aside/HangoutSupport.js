@@ -22,7 +22,7 @@ const HangoutSupport = () => {
 			bottom='0px'
 			display='flex'
 			justifyContent='center'
-			width='19%'
+			width='16%'
 			borderTop='1px solid gray'
 		>
 			<Divider

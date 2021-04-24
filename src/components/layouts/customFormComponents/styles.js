@@ -76,6 +76,23 @@ const styles = () => ({
 			color: grayColor[6],
 		},
 	},
+	radio: {
+		marginLeft: 'initial',
+		marginRight: 'initial',
+		'& .MuiSvgIcon-root': {
+			fontSize: '20px',
+		},
+		'& .MuiTypography-body1': {
+			fontSize: '14px',
+			color: grayColor[6],
+		},
+		'& .MuiCheckbox-root': {
+			padding: '0px',
+		},
+		'& .Mui-checked': {
+			color: grayColor[6],
+		},
+	},
 });
 
 export default styles;

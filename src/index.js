@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom';
 import './assets/css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppState from './context/app/AppState';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+	<AppState>
+		<App />
+	</AppState>,
+	document.getElementById('root')
+);
 
 reportWebVitals();

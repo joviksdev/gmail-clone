@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../../../context/app/appContext';
 import styles from './styles';
 import logo from '../../../assets/img/gmail-logo.png';
 import TextField from '../customFormComponents/TextField';
@@ -23,11 +24,18 @@ const useStyles = makeStyles(styles);
 
 const Header = () => {
 	const classes = useStyles();
+	const appContext = useContext(AppContext);
+	const { displaySettings } = appContext;
+
+	const handleDisplaySettings = () => {
+		displaySettings();
+	};
+
 	return (
 		<AppBar position='static' className={classes.appBar}>
 			<Toolbar>
-				<Box width='100%' display='flex'>
-					<Box flexBasis='18%' display='flex' alignItems='center'>
+				<Box height='50px' width='100%' display='flex'>
+					<Box flexBasis='260px' display='flex' alignItems='center'>
 						<Box mr='10px'>
 							<Button className={classes.barIcon}>
 								<MenuIcon />
@@ -37,12 +45,7 @@ const Header = () => {
 							<img src={logo} alt='gmail-logo' />
 						</Box>
 					</Box>
-					<Box
-						flexBasis='60%'
-						display='flex'
-						justifyContent='space-between'
-						alignItems='center'
-					>
+					<Box flex='1' display='flex' alignItems='center'>
 						<TextField
 							fullWidth={true}
 							variant='outlined'
@@ -56,7 +59,7 @@ const Header = () => {
 					</Box>
 					<Box
 						display='flex'
-						flexBasis='24%'
+						flexBasis='290px'
 						justifyContent='flex-end'
 						alignItems='center'
 					>
@@ -68,7 +71,7 @@ const Header = () => {
 							<Button className={classes.btn}>
 								<HelpOutlineOutlinedIcon />
 							</Button>
-							<Button className={classes.btn}>
+							<Button onClick={handleDisplaySettings} className={classes.btn}>
 								<SettingsOutlinedIcon />
 							</Button>
 							<Button className={classes.btn}>

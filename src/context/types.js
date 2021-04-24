@@ -1,0 +1,1 @@
+export const DISPLAY_SETTINGS = 'DISPLAY_SETTINGS';

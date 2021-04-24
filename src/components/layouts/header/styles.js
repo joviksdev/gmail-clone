@@ -1,4 +1,4 @@
-import { btn, container } from '../../../assets/js/stylesComponents';
+import { btn, container, grayColor } from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	container: {
@@ -6,6 +6,9 @@ const styles = () => ({
 	},
 	appBar: {
 		...container,
+		zIndex: '10000px',
+		boxShadow: 'none',
+		borderBottom: `1px solid ${grayColor[9]}`,
 		backgroundColor: 'transparent !important',
 		padding: '5px 0px',
 		width: '100%',
@@ -19,7 +22,7 @@ const styles = () => ({
 	btn: {
 		...btn,
 		'& .MuiSvgIcon-root': {
-			fontSize: '18px',
+			fontSize: '24px',
 		},
 	},
 	contentBtn: {
@@ -36,6 +39,9 @@ const styles = () => ({
 		'& .MuiTablePagination-actions': {
 			marginLeft: '0px',
 		},
+	},
+	height: {
+		height: 'calc(100vh - 50px)',
 	},
 });
 

@@ -25,6 +25,19 @@ const styles = () => ({
 			fontSize: '20px',
 		},
 	},
+	list: {
+		zIndex: '200',
+		display: 'flex',
+		flexDirection: 'column',
+		'& .MuiListItem-root': {
+			display: 'block',
+			padding: '6px 50px',
+		},
+		'& .MuiTypography-body2': {
+			padding: '10px 50px',
+			fontStyle: 'italic',
+		},
+	},
 });
 
 export default styles;

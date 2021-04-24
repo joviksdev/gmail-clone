@@ -45,6 +45,9 @@ const styles = () => ({
 	},
 	btn: {
 		...btn,
+		borderRadius: '50%',
+		height: '35px',
+		width: '35px',
 		'& .MuiSvgIcon-root': {
 			fontSize: '20px',
 		},
@@ -53,7 +56,7 @@ const styles = () => ({
 		color: 'red',
 	},
 	meetingWrapper: {
-		height: '30vh',
+		height: '20vh',
 		overflowY: 'auto',
 	},
 });

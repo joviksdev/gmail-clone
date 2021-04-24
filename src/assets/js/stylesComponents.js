@@ -7,6 +7,11 @@ const btn = {
 	textTransform: 'capitalize',
 };
 
+const link = {
+	textDecoration: 'none',
+	listStyle: 'none',
+};
+
 const container = {
 	padding: '0 15px',
 	margin: 'auto',
@@ -90,4 +95,5 @@ export {
 	successColor,
 	dangerColor,
 	warningColor,
+	link,
 };
