@@ -2,7 +2,6 @@ import { btn } from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	tabs: {
-		borderBottom: '1px solid rgba(250, 250, 250, 0.5)',
 		'& .MuiButtonBase-root': {
 			...btn,
 			minWidth: 'initial',
@@ -25,7 +24,10 @@ const styles = () => ({
 			borderTopLeftRadius: '5px',
 		},
 	},
-	indicator: {},
+	panel: {
+		height: 'calc(100vh - 120px)',
+		overflowY: 'auto',
+	},
 });
 
 export default styles;

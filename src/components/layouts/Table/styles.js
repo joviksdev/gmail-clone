@@ -1,10 +1,10 @@
-import { btn } from '../../../assets/js/stylesComponents';
+import { btn, transition } from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	tableContainer: {
 		backgroundColor: 'rgba(0, 0, 0, 0.3)',
 		'& .MuiTableCell-root': {
-			padding: '10px',
+			padding: '4px 0px',
 		},
 	},
 	pagination: {
@@ -36,6 +36,31 @@ const styles = () => ({
 		'& .MuiTypography-body2': {
 			padding: '10px 50px',
 			fontStyle: 'italic',
+		},
+	},
+	tableBtn: {
+		borderRadius: '50%',
+		height: '30px',
+		width: '30px',
+		position: 'relative',
+		cursor: 'pointer',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		'& .MuiSvgIcon-root': {
+			color: 'white !important',
+			zIndex: '200',
+		},
+		'&:before': {
+			...transition,
+			content: '""',
+			position: 'absolute',
+			width: '38px',
+			height: '38px',
+			borderRadius: '50%',
+		},
+		'&:hover:before': {
+			backgroundColor: 'rgba(0, 0, 0,0.2) !important',
 		},
 	},
 });

@@ -23,7 +23,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles(styles);
 
-const Header = () => {
+const Header = ({ selectAllInbox, isSelectedAllInbox }) => {
 	const classes = useStyles();
 
 	const [openList, setOpenList] = useState(false);
@@ -68,14 +68,14 @@ const Header = () => {
 
 	return (
 		<Box
-			padding='0px 10px'
+			padding='0px 14px'
 			display='flex'
 			alignItems='center'
 			justifyContent='space-between'
 		>
 			<Box display='flex' alignItems='center'>
 				<Box ref={anchorRef} display='flex' position='relative'>
-					<Checkbox />
+					<Checkbox checked={isSelectedAllInbox} onChange={selectAllInbox} />
 					<ArrowDropDownIcon
 						style={{ cursor: 'pointer' }}
 						onClick={handleToggleList}

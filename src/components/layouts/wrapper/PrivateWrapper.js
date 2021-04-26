@@ -3,7 +3,6 @@ import AppContext from '../../../context/app/appContext';
 import Header from '../header/Header';
 import LeftAside from '../aside/LeftAside';
 import styles from './styles';
-import ContentHeader from '../Table/Header';
 import Settings from '../settings';
 // import img from '../../../assets/img/themes/theme1.jpg';
 import RightAside from '../aside/RightAside';
@@ -31,11 +30,10 @@ const PrivateWrapper = ({ children }) => {
 		>
 			<Header />
 			<Box width='100%' display='flex'>
-				<Box flexShrink='0' width='280px'>
+				<Box flexShrink='0' width='260px'>
 					<LeftAside />
 				</Box>
 				<Box className={classes.height} width='100%' flexShrink='1'>
-					<ContentHeader />
 					<Box>{children}</Box>
 				</Box>
 				{isDisplaySettings && (

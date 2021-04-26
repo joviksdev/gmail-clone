@@ -1,4 +1,8 @@
-import { btn, whiteColor } from '../../../assets/js/stylesComponents';
+import {
+	btn,
+	whiteColor,
+	transition,
+} from '../../../assets/js/stylesComponents';
 
 const styles = () => ({
 	menuListWrapper: {
@@ -30,6 +34,7 @@ const styles = () => ({
 			fontSize: '20px',
 		},
 	},
+	rightAside: {},
 	rotate: {
 		transform: 'rotate(180deg)',
 	},
@@ -50,6 +55,45 @@ const styles = () => ({
 		width: '35px',
 		'& .MuiSvgIcon-root': {
 			fontSize: '20px',
+		},
+	},
+	chevronRightIcon: {
+		...btn,
+		transition: 'all 400ms',
+		padding: '20px',
+		zIndex: '1000',
+		position: 'fixed',
+		bottom: '30px',
+		right: '8px',
+		backgroundColor: 'rgba(0, 0, 0, 0.6)',
+		borderRadius: '50%',
+		height: '35px',
+		width: '35px',
+		'& .MuiSvgIcon-root': {
+			...transition,
+			fontSize: '20px',
+		},
+		'&:hover': {
+			backgroundColor: 'rgba(0, 0, 0, 0.3)',
+		},
+	},
+	chevronRightRotate: {
+		width: '50px',
+		right: '-25px',
+		display: 'flex',
+		padding: '20px 5px',
+		justifyContent: 'end',
+		borderTopLeftRadius: '20px',
+		borderBottomLeftRadius: '20px',
+		borderBottomRightRadius: '0px',
+		borderTopRightRadius: '0px',
+		'&:hover': {
+			right: '0px',
+		},
+		'& .MuiSvgIcon-root': {
+			transform: 'rotate(180deg)',
+			display: 'flex',
+			justifyContent: 'end',
 		},
 	},
 	divider: {

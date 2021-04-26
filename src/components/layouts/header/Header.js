@@ -35,7 +35,12 @@ const Header = () => {
 		<AppBar position='static' className={classes.appBar}>
 			<Toolbar>
 				<Box height='50px' width='100%' display='flex'>
-					<Box flexBasis='260px' display='flex' alignItems='center'>
+					<Box
+						flexBasis='240px'
+						flexShrink='0'
+						display='flex'
+						alignItems='center'
+					>
 						<Box mr='10px'>
 							<Button className={classes.barIcon}>
 								<MenuIcon />
@@ -59,7 +64,8 @@ const Header = () => {
 					</Box>
 					<Box
 						display='flex'
-						flexBasis='290px'
+						flexShrink='0'
+						flexBasis='350px'
 						justifyContent='flex-end'
 						alignItems='center'
 					>

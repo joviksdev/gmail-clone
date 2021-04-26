@@ -1,8 +1,7 @@
 import themeOne from '../img/themes/theme1.jpg';
 import themeTwo from '../img/themes/theme2.jpg';
 import themeThree from '../img/themes/theme3.jpg';
-
-export default [
+const data = [
 	{
 		name: 'themeOne',
 		src: themeOne,
@@ -20,3 +19,5 @@ export default [
 		src: themeTwo,
 	},
 ];
+
+export default data;

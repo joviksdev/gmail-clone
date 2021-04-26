@@ -17,15 +17,20 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 const useStyles = makeStyles(styles);
 
-const Index = () => {
+const Index = ({ isSelectedAllInbox }) => {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
 	const handleChange = (e, value) => {
 		setValue(value);
 	};
 	return (
-		<div>
-			<Box bgcolor='rgba(0, 0, 0, 0.3)' color='white' px='5px'>
+		<Box className={classes.panel}>
+			<Box
+				borderBottom='1px solid rgba(250, 250, 250, 0.5)'
+				bgcolor='rgba(0, 0, 0, 0.3)'
+				color='white'
+				px='10px'
+			>
 				<Tabs
 					value={value}
 					onChange={handleChange}
@@ -38,7 +43,7 @@ const Index = () => {
 				</Tabs>
 			</Box>
 			<TabPanel value={value} index={0}>
-				<Table data={inbox} />
+				<Table isSelectedAllInbox={isSelectedAllInbox} data={inbox} />
 			</TabPanel>
 			<TabPanel value={value} index={1}>
 				Social
@@ -46,7 +51,7 @@ const Index = () => {
 			<TabPanel value={value} index={2}>
 				Promotion
 			</TabPanel>
-		</div>
+		</Box>
 	);
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles';
 import Checkbox from '../customFormComponents/CustomCheckbox';
 
@@ -9,16 +9,29 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 
 // MAterial-ui/Icons
 import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
+import LabelImportantOutlinedIcon from '@material-ui/icons/LabelImportantOutlined';
 
 const useStyles = makeStyles(styles);
 
-const Index = ({ data }) => {
+const Index = ({ data, isSelectedAllInbox }) => {
 	const classes = useStyles();
-	const [page, setPage] = React.useState(0);
-	const [rowsPerPage, setRowsPerPage] = React.useState(5);
+	const [page, setPage] = useState(0);
+	const [rowsPerPage, setRowsPerPage] = useState(5);
+	const [selected, setSelected] = useState([]);
+
+	const handleSelect = (id) => {
+		console.log(id);
+
+		if (selected.includes(id)) {
+			return setSelected(selected.filter((value) => value !== id));
+		}
+		setSelected([...selected, id]);
+	};
+
 	return (
 		<TableContainer className={classes.tableContainer}>
 			<Table>
@@ -28,15 +41,38 @@ const Index = ({ data }) => {
 						: data
 					).map((row) => (
 						<TableRow hover key={row.id}>
-							<TableCell padding='checkbox'>
-								<Checkbox />
+							<TableCell style={{ width: '3px', marginLeft: '5px' }}>
+								<Checkbox
+									checked={selected.includes(row.id) || isSelectedAllInbox}
+									onChange={() => handleSelect(row.id)}
+									style={{ marginLeft: '10px' }}
+									className={classes.tableBtn}
+								/>
 							</TableCell>
-							<TableCell padding='checkbox'>
-								<GradeOutlinedIcon />
+							<TableCell
+								style={{
+									width: '3px',
+								}}
+							>
+								<Box className={classes.tableBtn}>
+									<GradeOutlinedIcon />
+								</Box>
+							</TableCell>
+							<TableCell
+								style={{
+									width: '3px',
+								}}
+							>
+								<Box
+									style={{ marginRight: '6px' }}
+									className={classes.tableBtn}
+								>
+									<LabelImportantOutlinedIcon />
+								</Box>
 							</TableCell>
 							<TableCell>{row.sender}</TableCell>
 							<TableCell scope='row'>{row.title}</TableCell>
-							<TableCell align='right' scope='row'>
+							<TableCell align='right' style={{ paddingRight: '12px' }}>
 								{row.date}
 							</TableCell>
 						</TableRow>

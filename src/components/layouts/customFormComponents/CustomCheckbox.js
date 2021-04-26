@@ -11,9 +11,9 @@ const useStyles = makeStyles(styles);
 
 const CustomCheckbox = (props) => {
 	const classes = useStyles();
-	const { label, checked, onChange, name, style } = props;
+	const { label, checked, onChange, name, style, className } = props;
 	return (
-		<Box style={style}>
+		<Box className={className} style={style}>
 			<FormControlLabel
 				className={classes.checkBox}
 				control={<Checkbox checked={checked} onChange={onChange} name={name} />}
