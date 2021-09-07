@@ -38,6 +38,9 @@ const styles = () => ({
 			fontStyle: 'italic',
 		},
 	},
+	row: {
+		cursor: 'pointer',
+	},
 	tableBtn: {
 		borderRadius: '50%',
 		height: '30px',

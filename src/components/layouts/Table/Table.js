@@ -40,7 +40,7 @@ const Index = ({ data, isSelectedAllInbox }) => {
 						? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
 						: data
 					).map((row) => (
-						<TableRow hover key={row.id}>
+						<TableRow className={classes.row} hover key={row.id}>
 							<TableCell style={{ width: '3px', marginLeft: '5px' }}>
 								<Checkbox
 									checked={selected.includes(row.id) || isSelectedAllInbox}
